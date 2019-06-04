@@ -293,3 +293,15 @@ set -g mouse on
 
 # move status line to top
 #set -g status-position top
+#
+# set opt-shift-h/j/k/l to resize
+bind -n M-J resize-pane -D 5
+bind -n M-K resize-pane -U 5
+bind -n M-H resize-pane -L 5
+bind -n M-L resize-pane -R 5
+
+# set opt-h/j/k/l to nav panes
+bind-key -n M-h select-pane -L
+bind-key -n M-j select-pane -D 
+bind-key -n M-k select-pane -U
+bind-key -n M-l select-pane -R
