@@ -284,12 +284,11 @@ set -g mouse on
 #set -g status-keys vi
 #set -g mode-keys vi
 
-# replace C-b by C-a instead of using both prefixes
-# set -gu prefix2
-# unbind C-a
-# unbind C-b
-# set -g prefix C-a
-# bind C-a send-prefix
+# Set ctrl+a as a secondary prefix so can use "screen" bindings
+# I disabled this because when I'd send commands to a remote screen it would
+# instead affect my local tmux
+#bind C-a send-prefix -2                  # Both of these do the same thing
+#set -g prefix2 C-a                        # GNU-Screen compatible prefix
 
 # move status line to top
 #set -g status-position top
