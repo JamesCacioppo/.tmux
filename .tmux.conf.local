@@ -287,8 +287,9 @@ set -g mouse on
 # Set ctrl+a as a secondary prefix so can use "screen" bindings
 # I disabled this because when I'd send commands to a remote screen it would
 # instead affect my local tmux
-#bind C-a send-prefix -2                  # Both of these do the same thing
-#set -g prefix2 C-a                        # GNU-Screen compatible prefix
+set -g prefix2 C-a                        # GNU-Screen compatible prefix
+bind C-a send-prefix -2                  # This allows you to hit C-a a second time to unlock the prefix
+
 
 # move status line to top
 #set -g status-position top
